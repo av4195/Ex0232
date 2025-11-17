@@ -75,6 +75,10 @@ public class Regular extends Vehicles{
     }
 
     public void noise(){
-        tv.setText("noise level: 66");
+        System.out.print("noise level: 66");
+    }
+
+    public void hitchhikers(){
+        System.out.println("hitchhikers on regular car");
     }
 }

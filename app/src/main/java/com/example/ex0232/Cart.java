@@ -80,4 +80,8 @@ public class Cart extends Light{
         return 0;
     }
 
+    public void hitchhikers(){
+        System.out.println("hitchhikers on a cart");
+    }
+
 }

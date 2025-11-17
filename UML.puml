@@ -1,0 +1,236 @@
+@startuml
+class com.example.ex0232.Kibbutz {
+- Vehicles[] v
+- int carSum
++ void addVehicle(Vehicles)
++ List<Vehicles> f()
++ int h()
+}
+
+
+class com.example.ex0232.Vehicles {
+- String carID
+- int carAge
+- int weels
+- String weelType
+- int pollotionPerMin
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
++ int exhaust()
+}
+
+
+class com.example.ex0232.MainActivity {
+# void onCreate(Bundle)
++ int sumDailyPollotion(Vehicles[])
++ void showNoise(Vehicles[])
++ int passengers(Vehicles[])
++ String maxChargeTime(Vehicles[])
+}
+
+class com.example.ex0232.Tractor {
+- String type
++ String getType()
++ void setType(String)
++ int getTowing()
++ void setTowing(int)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
+}
+
+
+class com.example.ex0232.Heavy {
+- int towing
++ int getTowing()
++ void setTowing(int)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
++ int exhaust()
+}
+
+
+class com.example.ex0232.Truck {
+- int carryWight
++ int getCarryWight()
++ void setCarryWight(int)
++ int getTowing()
++ void setTowing(int)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
++ int exhaust()
+}
+
+
+class com.example.ex0232.Regular {
+~ TextView tv
+- int passengerNumber
++ int getPassengerNumber()
++ void setPassengerNumber(int)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
++ int exhaust()
++ void noise()
++ void hitchhikers()
+}
+
+
+class com.example.ex0232.Cart {
+- double loadingTime
++ double getLoadingTime()
++ void setLoadingTime(double)
++ boolean getDoesHaveEngine()
++ void setDoesHaveEngine(boolean)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
++ int exhaust()
++ void hitchhikers()
+}
+
+
+class com.example.ex0232.SchoolBus {
+- int stopsNumber
++ int getStopsNumber()
++ void setStopsNumber(int)
++ int getPassengerNumber()
++ void setPassengerNumber(int)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
+}
+
+
+class com.example.ex0232.Bicycle {
+- boolean basket
++ boolean getBasket()
++ void setBasket(boolean)
++ boolean getDoesHaveEngine()
++ void setDoesHaveEngine(boolean)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
+}
+
+
+abstract class com.example.ex0232.Light {
+- boolean doesHaveEngine
++ boolean getDoesHaveEngine()
++ void setDoesHaveEngine(boolean)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
+}
+
+
+class com.example.ex0232.GarbageTruck {
+- double fuelAmount
++ double getFuelAmount()
++ void setFuelAmount(double)
++ int getCarryWight()
++ int getTowing()
++ void setTowing(int)
++ String getCarID()
++ int getCarAge()
++ int getWeels()
++ String getWeelType()
++ int getPollotionPerMin()
++ void setCarryWight(int)
++ void setCarID(String)
++ void setCarAge(int)
++ void setWeels(int)
++ void setWeelType(String)
++ void setPollotionPerMin(int)
++ String toString()
+}
+
+
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.ex0232.MainActivity
+com.example.ex0232.Heavy <|-- com.example.ex0232.Tractor
+com.example.ex0232.Vehicles <|-- com.example.ex0232.Heavy
+com.example.ex0232.Heavy <|-- com.example.ex0232.Truck
+com.example.ex0232.Vehicles <|-- com.example.ex0232.Regular
+com.example.ex0232.Light <|-- com.example.ex0232.Cart
+com.example.ex0232.Regular <|-- com.example.ex0232.SchoolBus
+com.example.ex0232.Light <|-- com.example.ex0232.Bicycle
+com.example.ex0232.Vehicles <|-- com.example.ex0232.Light
+com.example.ex0232.Truck <|-- com.example.ex0232.GarbageTruck
+@enduml

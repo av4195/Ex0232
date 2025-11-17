@@ -57,4 +57,8 @@ public class Vehicles {
         return "carID = " + this.carID + " carAge = " + this.carAge + "weels= " + this.weels + " weeltype= " + this.weelType + " pollotionPerMin= " + this.pollotionPerMin;
     }
 
+    public int exhaust(){
+        return pollotionPerMin*60;
+    }
+
 }

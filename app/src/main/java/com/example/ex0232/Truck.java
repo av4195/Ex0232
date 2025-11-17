@@ -76,4 +76,9 @@ public class Truck extends Heavy{
     public String toString(){
         return super.toString() + " carryWight= " + this.carryWight;
     }
+
+    @Override
+    public int exhaust(){
+        return (int) (super.exhaust()*1.5);
+    }
 }

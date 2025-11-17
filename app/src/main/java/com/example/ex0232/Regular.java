@@ -3,6 +3,7 @@ package com.example.ex0232;
 import android.widget.TextView;
 
 public class Regular extends Vehicles{
+    TextView tv;
 
     private int passengerNumber;
 
@@ -68,4 +69,12 @@ public class Regular extends Vehicles{
         return super.toString() + " passengerNumber= " + this.passengerNumber;
     }
 
+    @Override
+    public int exhaust() {
+        return super.exhaust() + 20;
+    }
+
+    public void noise(){
+        tv.setText("noise level: 66");
+    }
 }

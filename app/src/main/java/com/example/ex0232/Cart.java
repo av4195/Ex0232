@@ -75,4 +75,9 @@ public class Cart extends Light{
         return super.toString() + " loadingTime= " + this.loadingTime;
     }
 
+    @Override
+    public int exhaust() {
+        return 0;
+    }
+
 }

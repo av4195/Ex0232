@@ -1,21 +1,30 @@
 package com.example.ex0232;
 
-public abstract class Light extends Vehicles{
-    private boolean doesHaveEngine;
+public class Bicycle extends Light{
+    private  boolean basket;
 
-    public Light(String carID,int carAge, int weels,String weelType,int pollotionPerMin,boolean doesHaveEngine){
-        super(carID,carAge,weels,weelType,pollotionPerMin);
-        this.doesHaveEngine= doesHaveEngine;
+    public Bicycle(String carID,int carAge, int weels,String weelType,int pollotionPerMin, boolean doesHaveEngine, boolean basket){
+        super(carID,carAge,weels,weelType,pollotionPerMin,doesHaveEngine);
+        this.basket = basket;
     }
 
+    public boolean getBasket(){
+        return this.basket;
+    }
+
+    public void setBasket(boolean basket){
+        this.basket = basket;
+    }
+
+    @Override
     public boolean getDoesHaveEngine(){
-        return this.doesHaveEngine;
+        return super.getDoesHaveEngine();
     }
 
-    public void setDoesHaveEngine(boolean doesHaveEngine){
-        this.doesHaveEngine = doesHaveEngine;
+    @Override
+    public void setDoseHaveEngine(boolean doseHaveEngine){
+        super.setDoesHaveEngine(doseHaveEngine);
     }
-
 
     @Override
     public String getCarID(){
@@ -64,6 +73,6 @@ public abstract class Light extends Vehicles{
 
     @Override
     public String toString(){
-        return super.toString() + " doesHaveEngine= " + this.doesHaveEngine;
+        return super.toString() + " basket= " + this.basket;
     }
 }

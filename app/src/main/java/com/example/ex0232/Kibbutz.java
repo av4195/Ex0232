@@ -16,7 +16,7 @@ public class Kibbutz {
         this.v[carSum] = n;
     }
 
-    public List<Vehicles> f(){
+    public List<Vehicles> list(){
         List<Vehicles> arrylList= new ArrayList<>();
         for (int i = 0; i < carSum; i++) {
             if(this.v[i].getCarAge() > 15){
@@ -28,7 +28,7 @@ public class Kibbutz {
         return arrylList;
     }
 
-    public int h(){
+    public int sumc(){
         int sum=0;
         for (int i = 0; i < carSum; i++) {
             if(this.v[i].getWeelType().equals("hege")){

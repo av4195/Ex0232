@@ -17,29 +17,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Bicycle i = new Bicycle("76",7,4,"m",5,true,true);
-        Truck e = new Truck("j",3,4,"k",1,2,1);
-        Regular j = new Regular("h",1,1,"h",5,5);
-        Tractor k = new Tractor("n",2,5,"jh",2,2,"h");
+        Bicycle bicycle = new Bicycle("76152",2,4,"Steel Wheels",50,false,true);
+        Truck truck = new Truck("254a1",3,4,"Alloy Wheels",1,2,1);
+        Regular regular = new Regular("45addl2",1,4,"Chrome Wheels",15,5);
+        Tractor tractor = new Tractor("1ildl22wa",2,4,"Forged Wheels",20,7,"work");
 
 
-        Vehicles[] v = {i,j,e,k};
+        Vehicles[] v = {bicycle,truck,regular,tractor};
         int[] m = {1,5,6,2,20,5};
         sumDailyPollotion(v);
     }
 
-    public int sumDailyPollotion(Vehicles[] m){
+    public int sumDailyPollotion(Vehicles[] v){
         int sum=0;
-        for (int i = 0; i < m.length; i++) {
-            sum = sum+ m[i].exhaust();
+        for (int i = 0; i < v.length; i++) {
+            sum = sum+ v[i].exhaust();
         }
         return sum;
     }
 
-    public void showNoise(Vehicles[] m){
-        for (int i = 0; i < m.length; i++) {
-            if (m[i] instanceof Regular) {
-                ((Regular) m[i]).noise();
+    public void showNoise(Vehicles[] vehicle){
+        for (int i = 0; i < vehicle.length; i++) {
+            if (vehicle[i] instanceof Regular) {
+                ((Regular) vehicle[i]).noise();
             }
         }
     }
@@ -58,18 +58,18 @@ public class MainActivity extends AppCompatActivity {
         return sum;
     }
 
-    public String maxChargeTime(Vehicles[] m){
+    public String maxChargeTime(Vehicles[] v){
         int maxIndex = 0;
         double maxLoading = 0;
-        for (int i = 0; i < m.length; i++) {
-            if (m[i] instanceof Cart){
-                if(((Cart) m[i]).getLoadingTime() > maxLoading){
-                    maxLoading = ((Cart) m[i]).getLoadingTime();
+        for (int i = 0; i < v.length; i++) {
+            if (v[i] instanceof Cart){
+                if(((Cart) v[i]).getLoadingTime() > maxLoading){
+                    maxLoading = ((Cart) v[i]).getLoadingTime();
                     maxIndex = i;
                 }
             }
         }
-        return m[maxIndex].getCarID();
+        return v[maxIndex].getCarID();
     }
 
 }

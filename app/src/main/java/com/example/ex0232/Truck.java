@@ -1,19 +1,30 @@
 package com.example.ex0232;
 
-public class Heavy extends Vehicles{
-    private int towing;
+public class Truck extends Heavy{
+    private int carryWight;
 
-    public Heavy(String carID,int carAge, int weels,String weelType,int pollotionPerMin, int towing){
-        super(carID, carAge, weels,weelType,pollotionPerMin);
-        this.towing = towing;
+    public Truck(String carID,int carAge, int weels,String weelType,int pollotionPerMin, int towingCapacity, int carryWight){
+        super(carID,carAge,weels,weelType,pollotionPerMin,towingCapacity);
+        this.carryWight = carryWight;
+
     }
 
+    public int getCarryWight(){
+        return this.carryWight;
+    }
+
+    public void setCarryWight(int carryWight){
+        this.carryWight= carryWight;
+    }
+
+    @Override
     public int getTowing(){
-        return towing;
+        return super.getTowing();
     }
 
+    @Override
     public void setTowing(int towing){
-        this.towing = towing;
+        super.setTowing(towing);
     }
 
     @Override
@@ -63,6 +74,6 @@ public class Heavy extends Vehicles{
 
     @Override
     public String toString(){
-        return super.toString() + " towing= " + this.towing;
+        return super.toString() + " carryWight= " + this.carryWight;
     }
 }

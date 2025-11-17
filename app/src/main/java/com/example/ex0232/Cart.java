@@ -1,19 +1,18 @@
 package com.example.ex0232;
 
-public class Bicycle extends Light{
-    private  boolean basket;
+public class Cart extends Light{
+    private double loadingTime;
 
-    public Bicycle(String carID,int carAge, int weels,String weelType,int pollotionPerMin, boolean doesHaveEngine, boolean basket){
+    public Cart(String carID,int carAge, int weels,String weelType,int pollotionPerMin, boolean doesHaveEngine, double loadingTime){
         super(carID,carAge,weels,weelType,pollotionPerMin,doesHaveEngine);
-        this.basket = basket;
+        this.loadingTime = loadingTime;
     }
 
-    public boolean getBasket(){
-        return this.basket;
+    public double getLoadingTime(){
+        return this.loadingTime;
     }
-
-    public void setBasket(boolean basket){
-        this.basket = basket;
+    public void setLoadingTime(double loadingTime){
+        this.loadingTime = loadingTime;
     }
 
     @Override
@@ -22,8 +21,8 @@ public class Bicycle extends Light{
     }
 
     @Override
-    public void setDoesHaveEngine(boolean doseHaveEngine){
-        super.setDoesHaveEngine(doseHaveEngine);
+    public void setDoesHaveEngine(boolean doesHaveEngine) {
+        super.setDoesHaveEngine(doesHaveEngine);
     }
 
     @Override
@@ -73,6 +72,7 @@ public class Bicycle extends Light{
 
     @Override
     public String toString(){
-        return super.toString() + " basket= " + this.basket;
+        return super.toString() + " loadingTime= " + this.loadingTime;
     }
+
 }

@@ -65,4 +65,9 @@ public class Heavy extends Vehicles{
     public String toString(){
         return super.toString() + " towing= " + this.towing;
     }
+
+    @Override
+    public int exhaust(){
+        return super.exhaust()+(towing*500);
+    }
 }
